@@ -34,7 +34,7 @@ const Home = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://127.0.0.1:3000/getBlog");
+        const response = await axios.get("https://backend-goblog.onrender.com/getBlog");
         setBlogs(response.data.data);
       } catch (error) {
         console.error("Error fetching blogs:", error);
@@ -55,7 +55,7 @@ const Home = () => {
 
   const handleDelete = async (title: string) => {
     try {
-      const response = await axios.delete("http://127.0.0.1:3000/deleteBlog", {
+      const response = await axios.delete("https://backend-goblog.onrender.com/deleteBlog", {
         headers: { "Content-Type": "application/json" },
         data: title,
       });

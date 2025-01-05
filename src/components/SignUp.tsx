@@ -34,7 +34,7 @@ const SignupPage = () => {
     }
 
     try {
-      const response = await axios.post('http://127.0.0.1:3000/signup', {
+      const response = await axios.post('https://backend-goblog.onrender.com/signup', {
         username: username.trim(),
         email: email.trim(),
         password,

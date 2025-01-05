@@ -39,7 +39,7 @@ const Blog = () => {
     formData.append("userid", id);
 
     try {
-      const res = await axios.post("http://127.0.0.1:3000/makeBlog", formData);
+      const res = await axios.post("https://backend-goblog.onrender.com/makeBlog", formData);
 
       if (res.status === 200) {
         toast.success("Blog posted successfully!");
